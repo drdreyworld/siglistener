@@ -56,7 +56,7 @@ func (self *SigListener) ListenCommands() {
 				}
 			case cmd := <-self.cmdChan:
 				if handler, ok := self.handlers[cmd]; ok {
-					go handler()
+					go handler(cmd)
 				} else {
 					log.Println("Unknown SigCommand", cmd)
 				}
