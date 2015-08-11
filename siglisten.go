@@ -1,4 +1,4 @@
-package siglisten
+package siglistener
 
 import (
 	"log"
